@@ -1,17 +1,5 @@
 version: "3.3"
 services:
-  aniplay:
-    container_name: Aniplay
-    restart: always
-    ports:
-      - 3000:3000
-    image: ghcr.io/luckyhv/aniplay:latest
-    links:
-      - redis:redis
-      - consumet:consumet
-      - db:db
-    volumes:
-      - .env:/usr/src/app/.env
   redis:
     image: redis:7.2.4-alpine
     restart: always
